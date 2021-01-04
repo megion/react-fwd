@@ -4,7 +4,7 @@ const commonConfig = require('./webpack.config.js')
 const DESTINATION = path.resolve(__dirname, 'dist')
 
 module.exports = merge(commonConfig, {
-  mode: 'development',
+  mode: 'production',
   //target: ["es5"],
   output: {
     path: DESTINATION,
