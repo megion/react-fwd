@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
     "module": "AMD",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "esModuleInterop": true,
     "target": "es5",
     "noImplicitAny": false,
     "removeComments": true,
@@ -8,7 +14,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "jsx": "react-jsx"
   },
   "compileOnSave": false,
   "include": ["src"],

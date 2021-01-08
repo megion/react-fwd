@@ -71,26 +71,19 @@ module.exports = {
         ],
       },
       {
-        test: /\.less$/,
+        test: /\.s[ac]ss$/i,
         use: [
           // creates style nodes from JS strings
-          //{loader: devMode ? 'style-loader' : MiniCssExtractPlugin.loader},
+          //process.env.NODE_ENV !== "production"
+            //? "style-loader"
+            //: MiniCssExtractPlugin.loader,
           {
             loader: MiniCssExtractPlugin.loader,
           },
-          // translates CSS into CommonJS
-          {
-            loader: 'css-loader',
-          },
-          // compiles Less to CSS
-          {
-            loader: 'less-loader',
-            //options: {
-            //lessOptions: {
-            ////paths: [path.resolve(__dirname, "node_modules")],
-            //},
-            //},
-          },
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
       {
