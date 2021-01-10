@@ -44,6 +44,6 @@ module.exports = merge(commonConfig, {
     }),
   ],
   entry: {
-    demo: './demo.ts',
+    demo: './demo.tsx',
   },
 })

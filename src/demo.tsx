@@ -1,16 +1,11 @@
 import './vendor'
 import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-class App extends React.Component {
-  public render(): JSX.Element {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1>React advanced course</h1>
-        </header>
-      </div>
-    )
-  }
-}
-
-export default App
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root'),
+)

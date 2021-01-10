@@ -17,13 +17,13 @@ module.exports = {
   context: ROOT,
 
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
 
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         exclude: [/node_modules/],
         use: [
           {

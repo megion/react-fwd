@@ -4,6 +4,3 @@
  * modules twice
  */
 import './fwd'
-
-//import { ProdCalendarModule } from './calendar'
-//export { ProdCalendarModule }
