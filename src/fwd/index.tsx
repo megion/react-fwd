@@ -1,18 +1,24 @@
 /**
  * Main entry point for fwd library
  */
+import React from 'react'
+import { Provider } from 'react-redux'
+import store from './store'
 
-//import React from 'react'
-import './fwd.less'
+import { Root } from './components/Root'
+import './fwd.scss'
 
-//function App() {
-  //return (
-    //<div className="App">
-      //<header className="App-header">
-        //<h1>React advanced course</h1>
-      //</header>
-    //</div>
-  //)
-//}
-
-//export default App
+export class App extends React.Component {
+  public render(): JSX.Element {
+    return (
+      <Provider store={store}>
+        <div className="App">
+          <header className="App-header">
+            <h1>React advanced course</h1>
+          </header>
+          <Root />
+        </div>
+      </Provider>
+    )
+  }
+}

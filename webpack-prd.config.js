@@ -15,18 +15,7 @@ module.exports = merge(commonConfig, {
   optimization: {
     minimize: false,
   },
-  /**
-   * externals for exclude libs from result bundle
-   */
-  //externals: {
-    //angular: {
-      //commonjs: 'angular',
-      //commonjs2: 'angular',
-      //amd: 'angular',
-      //root: 'angular', // indicates global variable
-    //},
-  //},
   entry: {
-    fwd: './fwd-lib.ts',
+    fwd: './fwd',
   },
 })

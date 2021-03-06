@@ -42,14 +42,6 @@ module.exports = {
       //],
       //},
       {
-        test: /\.(png|jpg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-          },
-        ],
-      },
-      {
         test: /.html$/,
         exclude: /index.html$/,
         use: 'html-loader',
@@ -87,11 +79,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(tpl|woff|ttf|otf|eot|woff2|svg)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]',
-        },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/inline',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
       },
     ],
   },
@@ -113,11 +106,6 @@ module.exports = {
       filename: '[name].css',
       //chunkFilename: devMode ? '[id].[name].css' : '[id].[name].[hash].css'
       chunkFilename: '[id].[name].css',
-    }),
-    new webpack.ProvidePlugin({
-      //$: 'jquery',
-      //jQuery: 'jquery',
-      //'window.jQuery': 'jquery',
     }),
   ],
 }
