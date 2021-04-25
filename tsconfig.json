@@ -6,7 +6,6 @@
       "dom.iterable",
       "esnext"
     ],
-    "esModuleInterop": true,
     "target": "ESNext",
     "noImplicitAny": false,
     "removeComments": false,
@@ -14,11 +13,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
-    "typeRoots": [
-      "node_modules/@types",
-      "src/typings/globals.d.ts"
-    ],
     "jsx": "react-jsx"
   },
   "compileOnSave": false,
