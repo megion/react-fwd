@@ -1,5 +1,3 @@
-/**
- */
 import path from 'path'
 import * as webpack from 'webpack'
 
@@ -69,12 +67,13 @@ const config: webpack.Configuration = {
 
   plugins: [
     new ESLintPlugin({
-      //exclude: ['node_modules'],
+      exclude: ['node_modules'],
       extensions: ['ts'],
     }),
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
+      filename: '[name].css',
+    }),
+    new MiniCssExtractPlugin({
       //filename: devMode ? '[name].css' : '[name].[hash].css',
       filename: '[name].css',
       //chunkFilename: devMode ? '[id].[name].css' : '[id].[name].[hash].css'

@@ -28,7 +28,7 @@ const config: webpack.Configuration = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /vendor/,
+          test: /node_modules/,
           chunks: 'initial',
           name: 'vendor',
           priority: 10,
@@ -46,7 +46,7 @@ const config: webpack.Configuration = {
     }),
   ],
   entry: {
-    demo: './demo.ts',
+    demo: './demo.tsx',
   },
 }
 export default merge(commonConfig, config)

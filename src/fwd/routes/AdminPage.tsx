@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
-import SignInForm from "../components/Auth/SignInForm"
-import { signIn } from "../ducks/auth"
+//import SignInForm from "../components/Auth/SignInForm"
+//import { signIn } from "../ducks/auth"
 
 class SingInPage extends Component {
   static propTypes = {}
@@ -14,17 +14,17 @@ class SingInPage extends Component {
     return (
       <div>
         <p>Sing in page</p>
-        <SignInForm onSubmit={this.handleSignIn} />
+        {/*<SignInForm onSubmit={this.handleSignIn} />*/}
       </div>
     )
   }
 
   handleSignIn = ({ email, password }) => {
-    this.props.signIn(email, password)
+    //this.props.signIn(email, password)
   }
 }
 
 export default connect(
   null,
-  { signIn } // map reducer function to props
+  //{ signIn } // map reducer function to props
 )(SingInPage)

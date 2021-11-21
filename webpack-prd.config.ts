@@ -5,7 +5,6 @@ import commonConfig from './webpack.config'
 
 const config: webpack.Configuration = {
   mode: 'production',
-  //target: ['es5'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',

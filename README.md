@@ -5,14 +5,14 @@ It using TypeScript, Webpack.
 ### Install
 
 ```sh
-$ npm install
+$ pnpm install
 
 ```
 
 ### Production Build
 
 ```sh
-$ npm run build:prd
+$ pnpm build:prd
 ```
 
 This will create a bundled version of the app in the `dist/` directory. Released file `dist/js/fwd.js` will be used as out library.
@@ -20,7 +20,7 @@ This will create a bundled version of the app in the `dist/` directory. Released
 ### Development Build
 
 ```sh
-$ npm run build
+$ pnpm build
 ```
 
 This will create a bundled version of the app in the `public/` directory and watch changes.
@@ -28,7 +28,7 @@ This will create a bundled version of the app in the `public/` directory and wat
 ### Development Build run as webpack-dev-server
 
 ```sh
-$ npm start
+$ pnpm start
 ```
 
 This will start the webpack dev server at [localhost:9000](http://localhost:9000/) in your browser.
