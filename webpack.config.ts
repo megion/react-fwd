@@ -73,12 +73,6 @@ const config: webpack.Configuration = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    new MiniCssExtractPlugin({
-      //filename: devMode ? '[name].css' : '[name].[hash].css',
-      filename: '[name].css',
-      //chunkFilename: devMode ? '[id].[name].css' : '[id].[name].[hash].css'
-      chunkFilename: '[id].[name].css',
-    }),
   ],
 }
 
